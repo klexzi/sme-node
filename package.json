@@ -19,5 +19,16 @@
   "homepage": "https://github.com/klexzi/sme-node#readme",
   "devDependencies": {
     "jest": "^23.4.2"
+  },
+  "dependencies": {
+    "config": "^2.0.1",
+    "express": "^4.16.3",
+    "joi": "^13.5.2",
+    "joi-objectid": "^2.0.0",
+    "joi-password-complexity": "^2.0.1",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.2.7",
+    "supertest": "^3.1.0",
+    "winston": "^3.0.0"
   }
 }

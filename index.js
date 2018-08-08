@@ -4,6 +4,7 @@ const joi = require('joi');
 const winston = require('winston');
 const config = require('config');
 const app = express();
+const db = require('./startups/db');
 
 app.get('/', (req, res) => {
     res.write('Welcome to SME APP');
