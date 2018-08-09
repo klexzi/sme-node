@@ -1,16 +1,21 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const joi = require('joi');
+require('express-async-errors');
 const winston = require('winston');
 const config = require('config');
 const app = express();
-const db = require('./startups/db');
+require('./startups/routes')(app);
+require('./startups/db')();
+require('./startups/logging')();
 
-app.get('/', (req, res) => {
-    res.write('Welcome to SME APP');
-    res.end();
-})
+
+app.use(express.json());
 const port = 5000;
+app.get('/', (req, res) => {
+    res.write('welcome to SME');
+});
+
 app.listen(port, () => {
-    console.log(`listening on port ${port}... `);
+    winston.info(`listening on port ${port}... `);
 });

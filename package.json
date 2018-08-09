@@ -4,7 +4,7 @@
   "description": "the backend of the sme app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watchAll --verbose"
   },
   "repository": {
     "type": "git",
@@ -21,14 +21,18 @@
     "jest": "^23.4.2"
   },
   "dependencies": {
+    "bcrypt": "^3.0.0",
     "config": "^2.0.1",
     "express": "^4.16.3",
+    "express-async-errors": "^3.0.0",
     "joi": "^13.5.2",
     "joi-objectid": "^2.0.0",
     "joi-password-complexity": "^2.0.1",
     "jsonwebtoken": "^8.3.0",
+    "lodash": "^4.17.10",
     "mongoose": "^5.2.7",
     "supertest": "^3.1.0",
-    "winston": "^3.0.0"
+    "winston": "^3.0.0",
+    "winston-mongodb": "^4.0.3"
   }
 }
