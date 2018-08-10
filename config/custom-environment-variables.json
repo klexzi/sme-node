@@ -1,4 +1,5 @@
 {
     "name": "SME APP",
-    "jwtSecret": "sme_secret"
+    "jwtSecret": "sme_secret",
+    "db": "sme_db"
 }
