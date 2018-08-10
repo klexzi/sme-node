@@ -1,5 +1,5 @@
 {
     "name": "SME APP",
     "jwtSecret": "",
-    "db": "mongodb://localhost/sme"
+    "db": ""
 }
