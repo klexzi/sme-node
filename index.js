@@ -10,6 +10,7 @@ app.use(express.json());
 require('./startups/routes')(app);
 require('./startups/db')();
 require('./startups/logging')();
+require('./startups/prod')(app);
 
 
 const port = 5000;

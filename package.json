@@ -4,7 +4,11 @@
   "description": "the backend of the sme app",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll --verbose"
+    "test": "jest --watchAll --verbose",
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "8.11.2"
   },
   "repository": {
     "type": "git",
@@ -22,9 +26,11 @@
   },
   "dependencies": {
     "bcrypt": "^3.0.0",
+    "compression": "^1.7.3",
     "config": "^2.0.1",
     "express": "^4.16.3",
     "express-async-errors": "^3.0.0",
+    "helmet": "^3.13.0",
     "joi": "^13.5.2",
     "joi-objectid": "^2.0.0",
     "joi-password-complexity": "^2.0.1",
