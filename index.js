@@ -18,7 +18,7 @@ if (!jwtSecret) {
     exit(1);
 }
 
-const port = process.env.port || 4000;
+const port = process.env.port;
 app.get('/', (req, res) => {
     res.write('welcome to SME');
     res.end();
