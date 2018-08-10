@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 const winston = require('winston');
+const config = require('config');
 
 module.exports = function () {
-    mongoose.connect("mongodb://localhost/sme")
-        .then(winston.info("connected to mongodb successfully..."));
+    mongoose.connect(config.get("db"))
+        .then(winston.info("connecting to mongodb"));
 }

@@ -12,6 +12,11 @@ require('./startups/db')();
 require('./startups/logging')();
 require('./startups/prod')(app);
 
+const jwtSecret = config.get('jwtSecret');
+if (!jwtSecret) {
+    console.error('Jwt Secret not set');
+    exit(1);
+}
 
 const port = 5000;
 app.get('/', (req, res) => {
