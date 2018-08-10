@@ -1,0 +1,4 @@
+{
+    "name": "SME APP",
+    "jwtSecret": "sme_secret"
+}
