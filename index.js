@@ -17,8 +17,9 @@ if (!jwtSecret) {
     console.error('Jwt Secret not set');
     exit(1);
 }
-
-const port = process.env.port;
+console.log(process.env.MONGODB_URI);
+const port = process.env.PORT;
+console.log(port);
 app.get('/', (req, res) => {
     res.write('welcome to SME');
     res.end();
