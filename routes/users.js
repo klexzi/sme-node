@@ -14,7 +14,7 @@ const {
 
 // To get all users
 router.get('/', async (req, res) => {
-    const users = await User.find().sort('name');
+    const users = await User.find().sort('name').select('-password');
     res.send(users);
     res.end();
 });

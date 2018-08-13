@@ -17,7 +17,7 @@ if (!jwtSecret) {
     console.error('Jwt Secret not set');
     exit(1);
 }
-const port = process.env.PORT;
+const port = process.env.PORT || 5000;
 app.get('/', (req, res) => {
     res.write('welcome to SME');
     res.end();
